@@ -116,7 +116,7 @@ if (file):
                     q.put([x, y])
                     conheceVizinhanca(img, q, contador, visitado)
                     cv2.putText(img, str(contador), (y,x), cv2.FONT_ITALIC, 0.5, 255,2)				
-                    print ("Objeto {0:3d} --> area: {1:7d} pixels".format(contador))
+                    print (contador)
         st.write ("Total: ", contador, "objeto(s)")
 
     def areas(img):
