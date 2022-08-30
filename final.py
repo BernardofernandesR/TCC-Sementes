@@ -85,9 +85,9 @@ if (file):
 
     altura  = img.shape[0]
     largura = img.shape[1]
-    #print ("altura  ",  altura)
-    #print ("largura ", largura)
-    #print ("pixels  ", altura*largura)
+    print ("altura  ",  altura)
+    print ("largura ", largura)
+    print ("pixels  ", altura*largura)
     st.write (" ## Contando Sementes")
 
     def conheceVizinhanca(img, q, cont, visitado):
@@ -116,7 +116,7 @@ if (file):
                     q.put([x, y])
                     conheceVizinhanca(img, q, contador, visitado)
                     cv2.putText(img, str(contador), (y,x), cv2.FONT_ITALIC, 0.5, 255,2)				
-                    #print "Objeto {0:3d} --> area: {1:7d} pixels".format(contador)
+                    print "Objeto {0:3d} --> area: {1:7d} pixels".format(contador)
         st.write ("Total: ", contador, "objeto(s)")
 
     def areas(img):
@@ -129,7 +129,7 @@ if (file):
 
     contar(img)
     contador = areas(img) 
-    #histograma(img)
+    histograma(img)
 
     
     #mostrar resultado
